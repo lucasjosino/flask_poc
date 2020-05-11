@@ -1,0 +1,281 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0 40vh 0 40vh;
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    position: fixed;
+    font-size: 2em;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    font-weight: 700;
+    text-align: center;
+    color: #585757;
+    background-color: #fff;
+}
+
+.dashboard{
+    width: 100%;
+    padding-top: 13vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#adicionar{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#adicionar > button{
+    cursor: pointer;
+    font-family: 'Poppins';
+    border-radius: 15px;
+    padding: 15px;
+    border: 3px solid #649656;
+    background-color: unset;
+    color: #649656;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+#adicionar > button:hover{
+opacity: 1;
+}
+
+#groupEntities{
+    width: 100%;
+}
+
+.entity{
+    width: 100%;
+    font-family: 'Poppins';
+    border-radius: 15px;
+    padding: 20px 0 20px 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    border-bottom: none;
+    border-right: none;
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(90deg, rgba(14,0,255,1) 0%, rgba(156,0,255,1) 0%, rgba(88,255,73,1) 100%);
+}
+
+.entity:hover{
+    cursor: pointer;
+}
+
+.optionsEntity{
+    display: flex;
+    height: 0;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.optionsEntity > div{
+    position: relative;
+    cursor: pointer;
+    top: -50px;
+    transform: rotate(180deg);
+    opacity: 0;
+    height: 94px;
+    width: 94px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: tomato;
+    border-radius: 35px;
+    margin: 0 10px 0 10px;
+    transition: 0.25s;
+}
+
+.fullEntity:hover .optionsEntity{
+    height: unset;
+}
+
+.fullEntity:hover .optionsEntity > div{
+    position: relative;
+    top: 0;
+    transform: rotate(0deg);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.optionsEntity > div:hover{
+    font-size: 20px;
+}
+
+#modal{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9); 
+    z-index: 500;
+    transition: 5s;
+}
+
+#modalEntity{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); 
+    z-index: 500;
+}
+
+form{
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#nomemodelo{
+    border: none;
+    border-bottom: 2px solid;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    color: black;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+#nomemodelo:focus{
+    border-color: red;
+}
+
+form > row{
+    display: flex;
+}
+
+.row{
+    margin-top: 5px;
+}
+
+.row > input{
+    border: none;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 20px;
+    outline: none;
+    transition: 2s;
+}
+
+.row > input:focus{
+    border-bottom: 1px solid;
+}
+
+.row > select{
+    border: none;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 20px;
+    outline: none;
+}
+
+.row > select:-ms-expand{
+    border: none;
+}
+
+#formoptions{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#formoptions > button{
+    padding: 10px;
+    border: none;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    background-color: unset;
+    cursor: pointer;
+    color: blue;
+    opacity: 0.8;
+    transition: 0.2s;
+    outline: none;
+}
+
+#formoptions > button:hover{
+    opacity: 1;
+}
+
+#formoptions > input{
+    padding: 10px;
+    border: 3px solid green;
+    border-radius: 10px;
+    color: green;
+    background-color: unset;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.2s;
+    text-align: center;
+}
+
+#formoptions > input:hover{
+    opacity: 1;
+}
+
+#nameEntity{
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#content{
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+}
+
+#resultado{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#resultado > p{
+    margin: 2px;
+}
+
+#voltar{
+    margin-top: 10px;
+    cursor: pointer;
+    color: blue;
+    font-family: 'Poppins';
+    font-size: 18px;
+    border: none;
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: unset;
+
+}
