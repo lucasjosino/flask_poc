@@ -63,6 +63,8 @@ def convertQueryInsertIntoValues(nomeCampoList):
         if nome != "id":
             if  not type(nomeCampoList[nome]) is int or type(nomeCampoList[nome]) is float:
                 nome = limpaQuery(nomeCampoList[nome])
+            else:
+                nome = nomeCampoList[nome]
             query = query +"'"+nome+"'"+", "
     query = query[:-2]
     return query
