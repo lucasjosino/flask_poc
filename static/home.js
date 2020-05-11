@@ -95,21 +95,8 @@ function entityModal(entityName,method){
     }
     else if (method == 'post')
     {
-        console.log("entrou!")
         link.innerText = "/"+entityName
         content.innerHTML = "Método de requisição HTTP POST e dados que serão inseridos"
-        datax = {id:2,nome:"josino",idade:"Francanalha"}
-        $.ajax({
-            method: "POST",
-            url: "/"+entityName.toLowerCase(),
-            contentType: "application/json",                                                                                                                                                                                                                                                    
-            data: JSON.stringify(datax),
-                success: function (data) {
-                },
-                error: function (data) {
-                    alert("houve algum problema!");
-                },
-        });
     }
     modal.style.filter = "opacity(1)";
     modal.style.display = "flex";   
