@@ -17,15 +17,15 @@ O restante dos pré-requisitos estão disponíveis no arquivo requirements.txt.
 Clicar no botão novo modelo e especificar os parametro e o nome da entidade. Após salvar todos os recursos básicos da API estarão disponíveis.
 Exemplo: Empregados{ nome: String, idade:Integer}
 
-#GET-
+GET-
 Retorna a lista de todos os objetos da entidade 
 Exemplo: https://entitygenerator.herokuapp.com/empregados
 
-#GETID-
+GETID-
 Retorna o objeto com o ID especificado
 Exemplo: https://entitygenerator.herokuapp.com/empregados/2
 
-#POST-
+POST-
 Insere um objeto com os atributos definidos no request no banco de dados
 Exemplo: https://entitygenerator.herokuapp.com/empregados
 {"nome":"Lucas Josino", "idade":24}
@@ -39,5 +39,5 @@ DELETE-
 Remove o objeto com o ID especificado
 Exemplo: https://entitygenerator.herokuapp.com/empregados/2
 
-#Author
+# Author
 Lucas Josino de Paula Gonçalves 
