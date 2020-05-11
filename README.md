@@ -15,7 +15,7 @@ O restante dos pré-requisitos estão disponíveis no arquivo requirements.txt.
 # Api Usage
 #Cadastro da entidade-
 Clicar no botão novo modelo e especificar os parametro e o nome da entidade. Após salvar todos os recursos básicos da API estarão disponíveis.
-Exemplo: Empregados{ nome: String, idade:Integer}
+Exemplo: Empregados{ nome: String, salario:decimal}
 
 GET-
 Retorna a lista de todos os objetos da entidade 
@@ -23,21 +23,21 @@ Exemplo: https://entitygenerator.herokuapp.com/empregados
 
 GETID-
 Retorna o objeto com o ID especificado
-Exemplo: https://entitygenerator.herokuapp.com/empregados/2
+Exemplo: https://entitygenerator.herokuapp.com/empregados/3
 
 POST-
 Insere um objeto com os atributos definidos no request no banco de dados
 Exemplo: https://entitygenerator.herokuapp.com/empregados
-{"nome":"Lucas Josino", "idade":24}
+{"nome":"Lucas Josino", "salario":20}
 
 PUT-
 Atualiza o objeto com o ID especificado com os atributos definidos no request
-Exemplo: https://entitygenerator.herokuapp.com/empregados/2
-{"nome":"Lucas Josino Goncalves", "idade":23}
+Exemplo: https://entitygenerator.herokuapp.com/empregados/3
+{"nome":"Lucas Josino Goncalves", "salario":200}
 
 DELETE-
 Remove o objeto com o ID especificado
-Exemplo: https://entitygenerator.herokuapp.com/empregados/2
+Exemplo: https://entitygenerator.herokuapp.com/empregados/3
 
 # Author
 Lucas Josino de Paula Gonçalves 
