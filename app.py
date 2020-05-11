@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify, Response
 from flask_wtf.csrf import CSRFProtect
 import sqlite3
 import os
-import requests
 import json
 
 app = Flask(__name__)
