@@ -64,7 +64,7 @@ def convertQueryInsertIntoValues(nomeCampoList):
             if  not type(nomeCampoList[nome]) is int or type(nomeCampoList[nome]) is float:
                 nome = limpaQuery(nomeCampoList[nome])
             else:
-                nome = nomeCampoList[nome]
+                nome = str(nomeCampoList[nome])
             query = query +"'"+nome+"'"+", "
     query = query[:-2]
     return query
@@ -220,4 +220,5 @@ def cadastraModelo():
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    # app.run(host='0.0.0.0', port=port)
+    app.run(host='localhost', port=port)
