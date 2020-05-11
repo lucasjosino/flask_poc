@@ -199,6 +199,7 @@ def teste(entity,id):
             response = jsonify(genericUpdate(request.get_json(),entity,id))
     return response
 
+# cadastra a entidade especificada pelo usuario
 @app.route('/cadastramodelo', methods=['GET', 'POST'])
 def cadastraModelo():
     conn = sqlite3.connect('sqlite.db')
@@ -215,6 +216,7 @@ def cadastraModelo():
     except:
         return Response(status = 500)
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port='5000', debug=True)
+    # port = int(os.environ.get("PORT", 5000))
+    # app.run(host='0.0.0.0', port=port)

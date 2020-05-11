@@ -1,3 +1,4 @@
+// chama a funcao para popular as entidades quando a pagina e carregada
 window.onload = entityPopulate();
 
 // adiciona um novo input no modal
@@ -25,11 +26,13 @@ function entityPopulate(){
     });
 }
 
+// exibe o modal para criar entidades 
 function addEntityModal(){
     modal = document.getElementById("modal");
     modal.style.display = "flex";
 }
 
+// cria um componente na tela sobre o entidade especificada
 function addEntity(entityName){
     entities = document.getElementById("groupEntities");
 
@@ -54,12 +57,14 @@ function addEntity(entityName){
     entities.appendChild(fullEntity);
 }
 
+// fecha o modal com as informacoes do metodo
 function closeModal(){
     var modalEntity = document.getElementById("modalEntity")
     modal.style.filter = "opacity(0)";
     modalEntity.style.display = "none";
 }
 
+// gerencia qual o conteudo do modal de acordo com o metodo selecionado
 function entityModal(entityName,method){
     modal = document.getElementById("modalEntity");
     nome = document.getElementById("nameEntity");
@@ -80,12 +85,12 @@ function entityModal(entityName,method){
     }
     else if (method == 'delete')
     {
-        link.innerText = "/"+entityName
+        link.innerText = "/"+entityName+"/id"
         content.innerHTML = "Método de requisição HTTP DELETE e ID do objeto deletado"
     }
     else if (method == 'put')
     {
-        link.innerText = "/"+entityName
+        link.innerText = "/"+entityName+"/id"
         content.innerHTML = "Método de requisição HTTP PUT e dados que serão atualizados"
     }
     else if (method == 'post')
@@ -110,6 +115,8 @@ function entityModal(entityName,method){
     modal.style.display = "flex";   
 }
 
+
+// faz o POST do modelo de entidade especificado pelo usuario
 function salvarEntity(){
     var form = document.getElementById("form");
     if(form.reportValidity())
